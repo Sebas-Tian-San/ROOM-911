@@ -39,7 +39,7 @@ class EmployeeController extends Controller
             $query->where('has_room_911_access', $request->has_room_911_access);
         }
 
-        $employees = $query->paginate(10);
+        $employees = $query->paginate(10000000);
 
         // Obtener los departamentos para el filtro
         $departments = Department::all();

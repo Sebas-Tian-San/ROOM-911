@@ -16,7 +16,7 @@ class DepartmentController extends Controller
      */
     public function index(Request $request): View
     {
-        $departments = Department::paginate();
+        $departments = Department::paginate(10000000);
 
         return view('department.index', compact('departments'))
             ->with('i', ($request->input('page', 1) - 1) * $departments->perPage());

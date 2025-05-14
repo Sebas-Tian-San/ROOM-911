@@ -16,7 +16,7 @@ class AccessAttempController extends Controller
      */
     public function index(Request $request): View
     {
-        $accessAttemps = AccessAttemp::paginate();
+        $accessAttemps = AccessAttemp::paginate(10000000);
 
         return view('access-attemp.index', compact('accessAttemps'))
             ->with('i', ($request->input('page', 1) - 1) * $accessAttemps->perPage());
