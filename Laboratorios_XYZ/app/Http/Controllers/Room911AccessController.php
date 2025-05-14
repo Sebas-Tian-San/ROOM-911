@@ -16,9 +16,9 @@ class Room911AccessController extends Controller
     public function processAccess(Request $request)
     {
     $request->validate([
-        'internal_id' => 'required|regex:/^\d{0,11}$/',
+        'internal_id' => 'required|regex:/^\d{0,9}$/',
     ], [
-    'internal_id.regex' => 'El campo ID interno debe contener solo números y máximo 10 dígitos.',
+    'internal_id.regex' => 'El campo ID interno debe contener solo números y máximo 9 dígitos.',
     ]);
 
         $internalId = (int) $request->input('internal_id');
