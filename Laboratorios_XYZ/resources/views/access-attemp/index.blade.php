@@ -4,6 +4,8 @@
     Access Attemps
 @endsection
 
+<!-- <link rel="stylesheet" href="{{ asset('css/accessattempts.css') }}"> -->
+
 @section('content')
     <div class="container-fluid">
         <div class="row">
@@ -13,14 +15,14 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Access Attemps') }}
+                                {{ __('Historial de Accesos') }}
                             </span>
 
-                             <div class="float-right">
+                             <!-- <div class="float-right">
                                 <a href="{{ route('access-attemps.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Create New') }}
                                 </a>
-                              </div>
+                              </div> -->
                         </div>
                     </div>
                     @if ($message = Session::get('success'))
@@ -36,10 +38,10 @@
                                     <tr>
                                         <th>No</th>
                                         
-									<th >Employee Id</th>
-									<th >Attempted Internal Id</th>
-									<th >Status</th>
-                                    <th >Created At</th>
+									<th >Empleado Id</th>
+									<th >Numero Interno Empleado</th>
+									<th >Estado</th>
+                                    <th >Creado En</th>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -55,7 +57,7 @@
 
                                             <td>
                                                 <form action="{{ route('access-attemps.destroy', $accessAttemp->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('access-attemps.show', $accessAttemp->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('access-attemps.show', $accessAttemp->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Ver') }}</a>
                                                     <!-- <a class="btn btn-sm btn-success" href="{{ route('access-attemps.edit', $accessAttemp->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a> -->
                                                     @csrf
                                                     @method('DELETE')

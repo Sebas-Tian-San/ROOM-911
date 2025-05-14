@@ -40,7 +40,7 @@ class DepartmentController extends Controller
         Department::create($request->validated());
 
         return Redirect::route('departments.index')
-            ->with('success', 'Department created successfully.');
+            ->with('success', 'Departamento creado satisfactoriamente.');
     }
 
     /**
@@ -71,7 +71,7 @@ class DepartmentController extends Controller
         $department->update($request->validated());
 
         return Redirect::route('departments.index')
-            ->with('success', 'Department updated successfully');
+            ->with('success', 'Departamento actualizado satisfactoriamente.');
     }
 
     public function destroy($id): RedirectResponse
@@ -79,6 +79,6 @@ class DepartmentController extends Controller
         Department::find($id)->delete();
 
         return Redirect::route('departments.index')
-            ->with('success', 'Department deleted successfully');
+            ->with('success', 'Departamento eliminado satisfactoriamente.');
     }
 }

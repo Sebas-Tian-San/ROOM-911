@@ -1,0 +1,29 @@
+.departments-panel {
+    padding: 20px;
+    background-color: #fefefe;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.departments-panel h3 {
+    margin-bottom: 16px;
+    color: #00695c;
+}
+
+.btn-green {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+.btn-green:hover {
+    background-color: #1e7e34;
+}
+
+.table {
+    font-size: 15px;
+    margin-top: 10px;
+}

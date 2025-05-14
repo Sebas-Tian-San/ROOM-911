@@ -107,7 +107,7 @@ class EmployeeController extends Controller
         $employee->update($request->validated());
 
         return Redirect::route('employees.index')
-            ->with('success', 'Employee updated successfully');
+            ->with('success', 'Empleado actualizado satisfactoriamente.');
     }
 
     public function destroy($id): RedirectResponse
@@ -115,7 +115,7 @@ class EmployeeController extends Controller
         Employee::find($id)->delete();
 
         return Redirect::route('employees.index')
-            ->with('success', 'Employee deleted successfully');
+            ->with('success', 'Empleado eliminado satisfactoriamente.');
     }
 
     public function import(Request $request)

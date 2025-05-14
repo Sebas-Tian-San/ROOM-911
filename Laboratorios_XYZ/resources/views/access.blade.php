@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
 @section('content')
-<div class="container">
+<div class="custom-container">
     <h2>Acceso al ROOM_911</h2>
 
     @if ($errors->any())
@@ -33,7 +35,9 @@
                 pattern="\d{1,10}"
                 title="Debe contener solo números y máximo 10 dígitos">
         </div>
-        <button type="submit" class="btn btn-primary mt-2">Validar Acceso</button>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary mt-3 px-5">Validar Acceso</button>
+        </div>
     </form>
 </div>
 @endsection

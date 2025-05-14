@@ -40,6 +40,7 @@
                                                             <a href="{{ route('employees.access-history.pdf', $employee->id) }}" class="btn btn-danger me-2">
                                 {{ __('Descargar PDF') }}
                                 </a>
+                                <a class="btn btn-primary btn-sm" href="{{ route('employees.index') }}"> {{ __('Volver') }}</a>
                             </div>
                         </div>
                     </form>
